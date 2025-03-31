@@ -6,7 +6,8 @@ public class PlayerMovement : MonoBehaviour
     //3:40
 
     public Rigidbody rb;
-    public float forwardForce = 2000f;
+    public float forwardForce = 4000f;
+    public float sidewaysForce = 100f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     //this is excecuted when you start the game
@@ -29,11 +30,13 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(0,0,forwardForce * Time.deltaTime);
 
         //basic controls
+        //ForceMode.VelocityChange was added later
+            // it helps the object to increase in speed as it is still going and helps to not be as slow
         if(Input.GetKey("d")){
-            rb.AddForce(500 * Time.deltaTime,0,0);
+            rb.AddForce(sidewaysForce * Time.deltaTime,0,0, ForceMode.VelocityChange);
         }else if(Input.GetKey("a"))
         {
-            rb.AddForce(-500 * Time.deltaTime,0,0);
+            rb.AddForce(-sidewaysForce * Time.deltaTime,0,0 ,ForceMode.VelocityChange);
         }
     }
 }
