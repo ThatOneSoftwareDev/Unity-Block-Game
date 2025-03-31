@@ -16,3 +16,37 @@ So in the FollowPlayer script we use public types a lot. What other types are th
 </p>
 
 -----
+
+---
+
+
+<h3 style="color:Blue;">What is rigidbody and what all can you do with it?</h3>
+<a 
+style="color: grey; font-weight: 500; font-size: 1rem;" 
+href="https://www.youtube.com/watch?v=gAB64vfbrhI&list=PLPV2KyIb3jR5QFsefuO2RlAgWEz6EvVi6&index=6"
+>
+Current video - 43:09
+</a>
+
+<p>
+Im not sure completely what rigid body is
+</p>
+
+-----
+
+---
+
+
+<h3 style="color:Blue;">What is rigidbody and what all can you do with it?</h3>
+<a 
+style="color: grey; font-weight: 500; font-size: 1rem;" 
+href="https://www.youtube.com/watch?v=gAB64vfbrhI&list=PLPV2KyIb3jR5QFsefuO2RlAgWEz6EvVi6&index=6"
+>
+Current video - 43:09
+</a>
+
+<p>
+Im not sure completely what rigid body is
+</p>
+
+-----
