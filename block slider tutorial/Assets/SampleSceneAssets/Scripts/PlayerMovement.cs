@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
     //3:40
 
     public Rigidbody rb;
+    public float forwardForce = 2000f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     //this is excecuted when you start the game
@@ -25,6 +26,6 @@ public class PlayerMovement : MonoBehaviour
             //rb.AddForce(0,0,200);
             //this is bad because it updates every seccond and computers will vary in frame rate!
             //instead of a fixed value that can make the cube slower or faster depending on the computer use the below instead
-        rb.AddForce(0,0,2000 * Time.deltaTime);
+        rb.AddForce(0,0,forwardForce * Time.deltaTime);
     }
 }
