@@ -17,6 +17,8 @@ public class PlayerCollision : MonoBehaviour
                 //This is a reference to a script
                     //this turns the sript off
                 movement.enabled = false;
+                //Search for the game manager
+                FindAnyObjectByType<GameManger>().EndGame();
                 break;
 
         }

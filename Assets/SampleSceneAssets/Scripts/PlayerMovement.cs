@@ -6,8 +6,11 @@ public class PlayerMovement : MonoBehaviour
     //3:40
 
     public Rigidbody rb;
-    public float forwardForce = 4000f;
-    public float sidewaysForce = 100f;
+    //unity editor always keep the value in unity first before the script so 
+        // you can use [System.NonSerialized] to get around this but it wont be in the inspector
+        // see : https://stackoverflow.com/a/46938228 for more details
+    public float forwardForce = 8000f;
+    public float sidewaysForce = 120f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     //this is excecuted when you start the game
@@ -37,6 +40,10 @@ public class PlayerMovement : MonoBehaviour
         }else if(Input.GetKey("a"))
         {
             rb.AddForce(-sidewaysForce * Time.deltaTime,0,0 ,ForceMode.VelocityChange);
+        }
+
+        if(rb.position.y < -1f){
+            FindAnyObjectByType<GameManger>().EndGame();
         }
     }
 }
