@@ -27,5 +27,13 @@ public class PlayerMovement : MonoBehaviour
             //this is bad because it updates every seccond and computers will vary in frame rate!
             //instead of a fixed value that can make the cube slower or faster depending on the computer use the below instead
         rb.AddForce(0,0,forwardForce * Time.deltaTime);
+
+        //basic controls
+        if(Input.GetKey("d")){
+            rb.AddForce(500 * Time.deltaTime,0,0);
+        }else if(Input.GetKey("a"))
+        {
+            rb.AddForce(-500 * Time.deltaTime,0,0);
+        }
     }
 }
